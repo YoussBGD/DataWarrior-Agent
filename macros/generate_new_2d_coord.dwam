@@ -1,0 +1,11 @@
+<macro name="generate_new_2d_coord">
+<task name="generate2DAtomCoordinates">
+colorizeScaffolds=false
+automatic=true
+scaffoldMode=centralRing
+structureColumn=Structure of SMILES
+</task>
+<task name="saveFileAs">
+fileName=./data/input/update_file.dwar
+</task>
+</macro>

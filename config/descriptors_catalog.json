@@ -1,0 +1,55 @@
+{
+  "categories": {
+    "weight": {
+      "description": "Molecular weight properties",
+      "descriptors": ["totalWeight", "fragmentWeight", "fragmentAbsWeight"]
+    },
+    "druglikeness": {
+      "description": "Drug-likeness and solubility",
+      "descriptors": ["logP", "logS", "acceptors", "donors", "sasa", "rpsa", "tpsa", "druglikeness"]
+    },
+    "toxicity": {
+      "description": "Toxicity predictions",
+      "descriptors": ["mutagenic", "tumorigenic", "reproEffective", "irritant", "nasty", "pains"]
+    },
+    "structure": {
+      "description": "Structural properties",
+      "descriptors": ["shape", "flexibility", "complexity", "fragments"]
+    },
+    "atoms": {
+      "description": "Atom counts",
+      "descriptors": ["heavyAtoms", "nonCHAtoms", "metalAtoms", "negAtoms", "stereoCenters", "aromAtoms", "sp3CFraction", "sp3Atoms", "symmetricAtoms"]
+    },
+    "bonds": {
+      "description": "Bond properties",
+      "descriptors": ["nonHBonds", "rotBonds", "closures"]
+    },
+    "rings": {
+      "description": "Ring analysis",
+      "descriptors": ["largestRing", "rings", "carbo", "heteroRings", "satRings", "nonAromRings", "aromRings", "carboSatRings", "carboNonAromRings", "carboAromRings", "heteroSatRings", "heteroNonAromRings", "heteroAromRings"]
+    },
+    "functional_groups": {
+      "description": "Functional groups",
+      "descriptors": ["amides", "amines", "alkylAmines", "arylAmines", "aromN", "basicN", "acidicO"]
+    },
+    "stereo": {
+      "description": "Stereochemistry",
+      "descriptors": ["stereoConfiguration"]
+    },
+    "3d": {
+      "description": "3D properties",
+      "descriptors": ["globularity", "globularity2", "surface3d", "volume3d"]
+    }
+  },
+  "all_descriptors": [
+    "totalWeight", "fragmentWeight", "fragmentAbsWeight", "logP", "logS", "acceptors", "donors", "sasa", "rpsa", "tpsa", "druglikeness", "mutagenic", "tumorigenic", "reproEffective", "irritant", "nasty", "pains", "shape", "flexibility", "complexity", "fragments", "heavyAtoms", "nonCHAtoms", "metalAtoms", "negAtoms", "stereoCenters", "aromAtoms", "sp3CFraction", "sp3Atoms", "symmetricAtoms", "nonHBonds", "rotBonds", "closures", "largestRing", "rings", "carbo", "heteroRings", "satRings", "nonAromRings", "aromRings", "carboSatRings", "carboNonAromRings", "carboAromRings", "heteroSatRings", "heteroNonAromRings", "heteroAromRings", "amides", "amines", "alkylAmines", "arylAmines", "aromN", "basicN", "acidicO", "stereoConfiguration", "globularity", "globularity2", "surface3d", "volume3d"
+  ],
+  "aliases": {
+    "mw": "totalWeight",
+    "molecular_weight": "totalWeight",
+    "hbd": "donors",
+    "hba": "acceptors",
+    "psa": "tpsa",
+    "rotatable_bonds": "rotBonds"
+  }
+}

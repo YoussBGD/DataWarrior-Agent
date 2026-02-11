@@ -1,0 +1,8 @@
+<macro name="save_csv_file">
+<task name="saveCommaSeparatedFile">
+fileName=./data/output/_snapshot.csv
+</task>
+<task name="saveFileAs">
+fileName=./data/input/update_file.dwar
+</task>
+</macro>

@@ -1,0 +1,39 @@
+<macro name="Lipinski_filter">
+<task name="calculateCompoundProperties">
+propertyList=fragmentWeight	logP	acceptors	donors
+largestFragment=true
+structureColumn=Structure of SMILES
+</task>
+<task name="changeRangeFilter">
+settings=0	500
+column=Molweight
+duplicate=1
+animation=state=stopped low2=80% high1=20% time=10
+</task>
+<task name="changeRangeFilter">
+settings=-2000	5
+column=cLogP
+duplicate=1
+animation=state=stopped low2=80% high1=20% time=10
+</task>
+<task name="changeRangeFilter">
+column=H-Donors
+duplicate=1
+animation=state=stopped low2=80% high1=20% time=10
+</task>
+<task name="changeRangeFilter">
+settings=0	10
+column=H-Acceptors
+duplicate=1
+animation=state=stopped low2=80% high1=20% time=10
+</task>
+<task name="changeRangeFilter">
+settings=0.0	5
+column=H-Donors
+duplicate=1
+animation=state=stopped low2=80% high1=20% time=10
+</task>
+<task name="saveFileAs">
+fileName=./data/input/update_file.dwar
+</task>
+</macro>

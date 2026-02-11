@@ -1,0 +1,29 @@
+{
+  "version": "2.0",
+  "description": "Short descriptions for Stage 1 (Planning). ~30 words max per macro.",
+  "macros": {
+    "open_file": "Open a chemical file (SDF, MOL, CSV with SMILES) in DataWarrior. Initializes the session and TCP macro agent.",
+    
+    "save_as_csv": "Export the current dataset to a CSV file. Saves all columns and calculated properties.",
+    
+    "calculate_all_descriptors": "Calculate all 59 molecular descriptors including druglikeness, toxicity, physicochemical properties, atom counts, and 3D properties.",
+    
+    "calculate_descriptors": "Calculate specific molecular descriptors. Allows selection of individual properties like logP, TPSA, molecular weight, etc.",
+    
+    "get_available_descriptors": "List all available molecular descriptors organized by category (druglikeness, toxicity, atoms, bonds, rings, etc.).",
+    
+    "apply_lipinski_filter": "Apply Lipinski Rule of Five filter for drug-likeness. Filters molecules with MW≤500, logP≤5, HBD≤5, HBA≤10.",
+    
+    "delete_columns": "Remove unwanted columns from the dataset. Useful for cleaning data before export.",
+    
+    "generate_2d_coordinates": "Generate or regenerate 2D coordinates for molecular structures. Improves visual representation.",
+    
+    "get_connection_status": "Check TCP connection status to DataWarrior plugin. Returns connected/disconnected state.",
+    
+    "get_session_info": "Get current session information including loaded file, structure column, and operation history.",
+    
+    "list_available_tools": "List all available DataWarrior tools organized by category with brief descriptions.",
+    
+    "read_dataset": "Read and analyze the current dataset contents. Returns CSV data with column names, values, and row count. Use this to answer ANY question about the actual data (columns, values, statistics, filtering, counting)."
+  }
+}

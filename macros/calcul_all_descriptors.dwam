@@ -1,0 +1,10 @@
+<macro name="calcul_all_descriptors">
+<task name="calculateCompoundProperties">
+propertyList=totalWeight	fragmentWeight	fragmentAbsWeight	logP	logS	acceptors	donors	sasa	rpsa	tpsa	druglikeness	mutagenic	tumorigenic	reproEffective	irritant	nasty	pains	shape	flexibility	complexity	fragments	heavyAtoms	nonCHAtoms	metalAtoms	negAtoms	stereoCenters	aromAtoms	sp3CFraction	sp3Atoms	symmetricAtoms	nonHBonds	rotBonds	closures	largestRing	rings	carbo	heteroRings	satRings	nonAromRings	aromRings	carboSatRings	carboNonAromRings	carboAromRings	heteroSatRings	heteroNonAromRings	heteroAromRings	amides	amines	alkylAmines	arylAmines	aromN	basicN	acidicO	stereoConfiguration	globularity	globularity2	surface3d	volume3d
+largestFragment=true
+structureColumn=Structure of SMILES
+</task>
+<task name="saveFileAs">
+fileName=./data/input/update_file.dwar
+</task>
+</macro>

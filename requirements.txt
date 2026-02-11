@@ -1,0 +1,38 @@
+# ============================================
+# DataWarrior-LLM - Python Dependencies
+# ============================================
+# 
+# Installation:
+#   pip install -r requirements.txt
+#
+# Note: Total download size ~3 GB (includes PyTorch)
+#
+# ============================================
+
+# === Web Interface ===
+streamlit==1.51.0
+
+# === Model Context Protocol (MCP) ===
+mcp==1.21.0
+fastmcp==2.13.1
+
+# === LLM API Clients ===
+openai==2.7.2                    # OpenAI GPT-4, GPT-4o, GPT-4o-mini
+anthropic==0.72.1                # Anthropic Claude 3.5 Sonnet/Opus
+aiohttp==3.13.2                  # Async HTTP for Ollama local models
+
+# === Semantic Search & Embeddings ===
+# sentence-transformers automatically installs:
+#   - torch (~800 MB)
+#   - transformers (~500 MB)
+#   - scikit-learn
+#   - scipy
+#   - huggingface-hub
+sentence-transformers==5.1.2
+
+# === Data Processing ===
+numpy==2.3.4
+pandas==2.3.3
+
+# === Utilities ===
+python-dotenv==1.2.1             # Environment variable management

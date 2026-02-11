@@ -1,0 +1,7 @@
+<macro name="open">
+<task name="RevalisMacroAgent5151">
+</task>
+<task name="openFile">
+fileName=./data/input/user_upload.csv
+</task>
+</macro>

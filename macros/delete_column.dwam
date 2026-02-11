@@ -1,0 +1,10 @@
+<macro name="delete_column">
+<task name="deleteColumns">
+columnDefMode=list
+columnList=VDW-Surface	VDW-Volume	Total Molweight
+defCriterion=
+</task>
+<task name="saveFileAs">
+fileName=./data/input/update_file.dwar
+</task>
+</macro>

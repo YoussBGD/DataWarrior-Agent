@@ -1,0 +1,46 @@
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://10.93.138.189:8501
+  External URL: http://194.199.195.7:8501
+
+[02/05/26 16:03:00] INFO     HTTP Request: POST                  _client.py:1025
+                             https://api.openai.com/v1/chat/comp                
+                             letions "HTTP/1.1 200 OK"                          
+[02/05/26 16:03:01] INFO     HTTP Request: POST                  _client.py:1025
+                             https://api.openai.com/v1/chat/comp                
+                             letions "HTTP/1.1 200 OK"                          
+[02/05/26 16:03:16] INFO     HTTP Request: POST                  _client.py:1025
+                             https://api.openai.com/v1/chat/comp                
+                             letions "HTTP/1.1 200 OK"                          
+[02/05/26 16:03:48] INFO     HTTP Request: POST                  _client.py:1025
+                             https://api.openai.com/v1/chat/comp                
+                             letions "HTTP/1.1 200 OK"                          
+[02/05/26 16:03:50] INFO     HTTP Request: POST                  _client.py:1025
+                             https://api.openai.com/v1/chat/comp                
+                             letions "HTTP/1.1 200 OK"                          
+[02/05/26 16:04:21] INFO     HTTP Request: POST                  _client.py:1025
+                             https://api.openai.com/v1/chat/comp                
+                             letions "HTTP/1.1 200 OK"                          
+[02/05/26 16:04:54] INFO     HTTP Request: POST                  _client.py:1025
+                             https://api.openai.com/v1/chat/comp                
+                             letions "HTTP/1.1 200 OK"                          
+[02/05/26 16:04:55] INFO     HTTP Request: POST                  _client.py:1025
+                             https://api.openai.com/v1/chat/comp                
+                             letions "HTTP/1.1 429 Too Many                     
+                             Requests"                                          
+                    INFO     Retrying request to            _base_client.py:1071
+                             /chat/completions in 0.420000                      
+                             seconds                                            
+[02/05/26 16:04:56] INFO     HTTP Request: POST                  _client.py:1025
+                             https://api.openai.com/v1/chat/comp                
+                             letions "HTTP/1.1 429 Too Many                     
+                             Requests"                                          
+                    INFO     Retrying request to            _base_client.py:1071
+                             /chat/completions in 0.420000                      
+                             seconds                                            
+                    INFO     HTTP Request: POST                  _client.py:1025
+                             https://api.openai.com/v1/chat/comp                
+                             letions "HTTP/1.1 429 Too Many                     
+                             Requests"                                          

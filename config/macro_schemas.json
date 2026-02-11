@@ -1,0 +1,204 @@
+{
+  "version": "2.0",
+  "description": "Detailed JSON schemas for Stage 2 (Parameterization). Full parameter specs.",
+  "schemas": {
+    "open_file": {
+      "name": "open_file",
+      "description": "Open a chemical file in DataWarrior",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string",
+            "description": "Path to the file to open. Can be relative to data/input/ or absolute path.",
+            "examples": ["molecules.sdf", "compounds.csv", "test.mol"]
+          }
+        },
+        "required": ["filename"]
+      }
+    },
+    
+    "save_as_csv": {
+      "name": "save_as_csv",
+      "description": "Export dataset to CSV file",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string",
+            "description": "Output filename. Will be saved in data/output/",
+            "default": "exported_data.csv",
+            "examples": ["results.csv", "filtered_molecules.csv"]
+          }
+        },
+        "required": []
+      }
+    },
+    
+    "calculate_all_descriptors": {
+      "name": "calculate_all_descriptors",
+      "description": "Calculate all 59 molecular descriptors",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    
+    "calculate_descriptors": {
+      "name": "calculate_descriptors",
+      "description": "Calculate specific molecular descriptors",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "descriptors": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "List of descriptor names to calculate",
+            "examples": [
+              ["logP", "totalWeight", "tpsa"],
+              ["donors", "acceptors", "rotBonds"],
+              ["mutagenic", "tumorigenic", "druglikeness"]
+            ]
+          }
+        },
+        "required": ["descriptors"]
+      },
+      "valid_descriptors": {
+        "weight": ["totalWeight", "fragmentWeight", "fragmentAbsWeight"],
+        "druglikeness": ["logP", "logS", "acceptors", "donors", "sasa", "rpsa", "tpsa", "druglikeness"],
+        "toxicity": ["mutagenic", "tumorigenic", "reproEffective", "irritant", "nasty", "pains"],
+        "structure": ["shape", "flexibility", "complexity", "fragments"],
+        "atoms": ["heavyAtoms", "nonCHAtoms", "metalAtoms", "negAtoms", "stereoCenters", "aromAtoms", "sp3CFraction", "sp3Atoms", "symmetricAtoms"],
+        "bonds": ["nonHBonds", "rotBonds", "closures"],
+        "rings": ["largestRing", "rings", "carbo", "heteroRings", "satRings", "nonAromRings", "aromRings", "carboSatRings", "carboNonAromRings", "carboAromRings", "heteroSatRings", "heteroNonAromRings", "heteroAromRings"],
+        "functional_groups": ["amides", "amines", "alkylAmines", "arylAmines", "aromN", "basicN", "acidicO"],
+        "3d": ["globularity", "globularity2", "surface3d", "volume3d"]
+      },
+      "aliases": {
+        "mw": "totalWeight",
+        "molecular_weight": "totalWeight",
+        "hbd": "donors",
+        "hba": "acceptors",
+        "psa": "tpsa",
+        "rotatable_bonds": "rotBonds"
+      }
+    },
+    
+    "get_available_descriptors": {
+      "name": "get_available_descriptors",
+      "description": "List available descriptors by category",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "description": "Optional: filter by category",
+            "enum": ["weight", "druglikeness", "toxicity", "structure", "atoms", "bonds", "rings", "functional_groups", "3d"],
+            "default": null
+          }
+        },
+        "required": []
+      }
+    },
+    
+    "apply_lipinski_filter": {
+      "name": "apply_lipinski_filter",
+      "description": "Apply Lipinski Rule of Five filter",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    
+    "delete_columns": {
+      "name": "delete_columns",
+      "description": "Delete columns from dataset",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "columns": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "List of column names to delete",
+            "examples": [
+              ["Molecule Name", "Comment"],
+              ["logP", "logS", "tpsa"]
+            ]
+          }
+        },
+        "required": ["columns"]
+      }
+    },
+    
+    "generate_2d_coordinates": {
+      "name": "generate_2d_coordinates",
+      "description": "Generate 2D coordinates for structures",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    
+    "get_connection_status": {
+      "name": "get_connection_status",
+      "description": "Check DataWarrior TCP connection",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    
+    "get_session_info": {
+      "name": "get_session_info",
+      "description": "Get session information",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    
+    "list_available_tools": {
+      "name": "list_available_tools",
+      "description": "List all available tools",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    
+    "read_dataset": {
+      "name": "read_dataset",
+      "description": "Read the current dataset to analyze its contents. Returns CSV data that can be used to answer questions about columns, values, statistics, etc.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "returns": {
+        "status": "success|warning|error",
+        "message": "string",
+        "data": "string (CSV content)",
+        "metadata": {
+          "rows": "integer",
+          "columns": "array of column names",
+          "tokens": "integer (estimated)"
+        }
+      },
+      "use_cases": [
+        "User asks about column names in the dataset",
+        "User asks how many molecules/rows are in the data",
+        "User asks about specific values (e.g., 'molecules with logP > 3')",
+        "User wants statistics (mean, min, max of a column)",
+        "User asks any question that requires seeing the actual data",
+        "User says 'show me the data' or 'what's in the dataset'"
+      ],
+      "notes": "The dataset is automatically saved after each operation. This reads the latest snapshot. After calling this, the data will be available in the context for follow-up questions."
+    }
+  }
+}

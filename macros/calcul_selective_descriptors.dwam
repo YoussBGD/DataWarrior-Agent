@@ -1,0 +1,10 @@
+<macro name="calcul_all_descriptors">
+<task name="calculateCompoundProperties">
+propertyList=totalWeight	tpsa	logP	mutagenic	tumorigenic
+largestFragment=true
+structureColumn=Structure of SMILES
+</task>
+<task name="saveFileAs">
+fileName=./data/input/update_file.dwar
+</task>
+</macro>
