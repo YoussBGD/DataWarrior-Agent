@@ -181,8 +181,8 @@ The TCP plugin enables external communication with DataWarrior. Without it, the 
 
 #### Install the Plugin
 
-# Copy the plugin JAR file (from this repository)
-cp plugin/macroagent.jar ~/.datawarrior/plugin/
+# Copy the plugin JAR file "macroagent.jar" (from this repository)
+cp macroagent.jar ~/.datawarrior/plugin/
 ```
 
 #### Verify Plugin Installation
