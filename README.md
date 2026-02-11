@@ -1,6 +1,7 @@
 #  DataWarrior-Agent
 
-**Natural Language Control of DataWarrior through LLM-powered Macro Orchestration**
+**Natural Language Control of Computational Chemistry Software « DataWarrior » Through Macro Orchestration** 
+https://chemrxiv.org/doi/full/10.26434/chemrxiv.10001959/v1
 
 DataWarrior-Agent enables users to control [DataWarrior](https://openmolecules.org/datawarrior/), a powerful cheminformatics platform, using natural language. Instead of navigating complex menus, simply describe what you want to do in plain English (or French), and the AI assistant will execute the appropriate operations. you can also ask questions about your dataset. 
 
